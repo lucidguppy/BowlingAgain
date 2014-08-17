@@ -18,9 +18,23 @@ Game::~Game() {
 }
 
 void Game::roll(int pins) {
-  score += pins;
+  rolls.push_back(pins);
+}
+
+bool Game::isSpare(int ii) {
+  return 10 == (rolls[ii] + rolls[ii + 1]);
 }
 
 int Game::getScore() {
+  int score = 0;
+  int ii = 0;
+  for (int frameIndex = 0; frameIndex < 10; ++frameIndex) {
+    if (isSpare(ii)) {
+      score += 10 + rolls[ii + 2];
+    } else {
+      score += rolls[ii] + rolls[ii + 1];
+    }
+    ii += 2;
+  }
   return score;
 }

@@ -8,9 +8,15 @@
 #ifndef BOWLINGGAME_H_
 #define BOWLINGGAME_H_
 
+#include <vector>
+
 class Game {
  private:
   int score;
+  std::vector<int> rolls;
+
+  bool isSpare(int ii);
+
  public:
   Game();
   virtual ~Game();
