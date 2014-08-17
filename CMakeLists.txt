@@ -1,0 +1,10 @@
+cmake_minimum_required (VERSION 2.8)
+add_definitions(-std=c++11)
+
+LIST(APPEND TEST_SOURCES ${CMAKE_SOURCE_DIR}/test/BowlingGameTest.cpp)
+LIST(APPEND TEST_SOURCES ${CMAKE_SOURCE_DIR}/BowlingGame.cpp)
+LIST(APPEND TEST_SOURCES ${CMAKE_SOURCE_DIR}/testmain.cpp)
+include_directories(${CMAKE_SOURCE_DIR})
+add_executable(bowlingGameTest ${TEST_SOURCES})
+enable_testing()
+add_test(TestRuns bowlingGameTest)
