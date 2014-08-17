@@ -12,6 +12,7 @@ class Game {
  public:
   Game();
   virtual ~Game();
+  void roll (int pins);
 };
 
 #endif /* BOWLINGGAME_H_ */

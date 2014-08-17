@@ -16,3 +16,5 @@ Game::~Game() {
   // TODO Auto-generated destructor stub
 }
 
+void Game::roll(int pins) {
+}
