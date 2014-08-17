@@ -53,7 +53,6 @@ TEST_CASE_METHOD(BowlingGameTest, "oneSpareGame", "[bowlingGame]") {
   REQUIRE(16 == g.getScore());
 }
 
-
 TEST_CASE_METHOD(BowlingGameTest, "oneStrikeGame", "[bowlingGame]") {
   rollStrike();
   g.roll(3);
