@@ -7,12 +7,12 @@
 
 #include "BowlingGame.h"
 
-BowlingGame::BowlingGame() {
+Game::Game() {
   // TODO Auto-generated constructor stub
 
 }
 
-BowlingGame::~BowlingGame() {
+Game::~Game() {
   // TODO Auto-generated destructor stub
 }
 

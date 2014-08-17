@@ -8,10 +8,10 @@
 #ifndef BOWLINGGAME_H_
 #define BOWLINGGAME_H_
 
-class BowlingGame {
+class Game {
  public:
-  BowlingGame();
-  virtual ~BowlingGame();
+  Game();
+  virtual ~Game();
 };
 
 #endif /* BOWLINGGAME_H_ */
