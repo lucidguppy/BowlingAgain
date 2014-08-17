@@ -7,7 +7,8 @@
 
 #include "BowlingGame.h"
 
-Game::Game() {
+Game::Game()
+    : score(0) {
   // TODO Auto-generated constructor stub
 
 }
@@ -17,8 +18,9 @@ Game::~Game() {
 }
 
 void Game::roll(int pins) {
+  score += pins;
 }
 
-int Game::score() {
-  return 0;
+int Game::getScore() {
+  return score;
 }

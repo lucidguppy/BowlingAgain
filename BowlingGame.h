@@ -9,11 +9,15 @@
 #define BOWLINGGAME_H_
 
 class Game {
+ private:
+  int score;
  public:
   Game();
   virtual ~Game();
   void roll (int pins);
-  int score();
+  int getScore();
+
+
 };
 
 #endif /* BOWLINGGAME_H_ */
