@@ -16,9 +16,15 @@ BowlingGameTest::BowlingGameTest()
 BowlingGameTest::~BowlingGameTest() {
 }
 
+void BowlingGameTest::rollMany(int n, int pins) {
+  for (int ii = 0; ii < n; ++ii) {
+    g.roll(pins);
+  }
+}
+
 TEST_CASE_METHOD(BowlingGameTest, "testGutterGame", "[bowlingGame]") {
-  for (int ii = 0; ii < 20; ++ii) {
-    g.roll(0);
+  rollMany(20, 0);
+  REQUIRE(0 == g.getScore());
   }
   REQUIRE(0 == g.score());
 }

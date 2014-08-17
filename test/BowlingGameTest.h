@@ -15,6 +15,7 @@ class BowlingGameTest {
   Game g;
   BowlingGameTest();
   virtual ~BowlingGameTest();
+  void rollMany(int n, int pins);
 };
 
 #endif /* BOWLINGGAMETEST_H_ */
