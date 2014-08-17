@@ -27,6 +27,10 @@ void BowlingGameTest::rollSpare() {
   g.roll(5);
 }
 
+void BowlingGameTest::rollStrike() {
+  g.roll(10);
+}
+
 TEST_CASE_METHOD(BowlingGameTest, "testGutterGame", "[bowlingGame]") {
   rollMany(20, 0);
   REQUIRE(0 == g.getScore());
@@ -44,8 +48,9 @@ TEST_CASE_METHOD(BowlingGameTest, "oneSpareGame", "[bowlingGame]") {
   REQUIRE(16 == g.getScore());
 }
 
+
 TEST_CASE_METHOD(BowlingGameTest, "oneStrikeGame", "[bowlingGame]") {
-  g.roll(10);
+  rollStrike();
   g.roll(3);
   g.roll(3);
   rollMany(17, 0);
