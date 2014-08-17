@@ -24,12 +24,15 @@ bool Game::isSpare(int ii) {
   return 10 == (rolls[ii] + rolls[ii + 1]);
 }
 
+int Game::strikeBonus(int frameIndex) {
+  return 10 + rolls[frameIndex + 1] + rolls[frameIndex + 2];
+}
 int Game::getScore() {
   int score = 0;
   int frameIndex = 0;
   for (int frame = 0; frame < 10; ++frame) {
     if (10 == rolls[frameIndex]) {
-      score += 10 + rolls[frameIndex + 1] + rolls[frameIndex + 2];
+      score += strikeBonus(frameIndex);
       frameIndex += 1;
     } else if (isSpare(frameIndex)) {
       score += 10 + rolls[frameIndex + 2];

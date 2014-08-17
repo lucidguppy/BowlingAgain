@@ -16,6 +16,7 @@ class Game {
   std::vector<int> rolls;
 
   bool isSpare(int ii);
+  int strikeBonus(int frameIndex);
 
  public:
   Game();
