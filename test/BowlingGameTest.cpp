@@ -41,19 +41,19 @@ TEST_CASE_METHOD(BowlingGameTest, "testPerfectGame", "[bowlingGame]") {
   REQUIRE(300 == g.getScore());
 }
 
-TEST_CASE_METHOD(BowlingGameTest, "allOnesGame", "[bowlingGame]") {
+TEST_CASE_METHOD(BowlingGameTest, "testAllOnesGame", "[bowlingGame]") {
   rollMany(20, 1);
   REQUIRE(20 == g.getScore());
 }
 
-TEST_CASE_METHOD(BowlingGameTest, "oneSpareGame", "[bowlingGame]") {
+TEST_CASE_METHOD(BowlingGameTest, "testOneSpareGame", "[bowlingGame]") {
   rollSpare();
   g.roll(3);
   rollMany(17, 0);
   REQUIRE(16 == g.getScore());
 }
 
-TEST_CASE_METHOD(BowlingGameTest, "oneStrikeGame", "[bowlingGame]") {
+TEST_CASE_METHOD(BowlingGameTest, "testOneStrikeGame", "[bowlingGame]") {
   rollStrike();
   g.roll(3);
   g.roll(3);
