@@ -36,6 +36,11 @@ TEST_CASE_METHOD(BowlingGameTest, "testGutterGame", "[bowlingGame]") {
   REQUIRE(0 == g.getScore());
 }
 
+TEST_CASE_METHOD(BowlingGameTest, "testPerfectGame", "[bowlingGame]") {
+  rollMany(12, 10);
+  REQUIRE(300 == g.getScore());
+}
+
 TEST_CASE_METHOD(BowlingGameTest, "allOnesGame", "[bowlingGame]") {
   rollMany(20, 1);
   REQUIRE(20 == g.getScore());
