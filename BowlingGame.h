@@ -13,6 +13,7 @@ class Game {
   Game();
   virtual ~Game();
   void roll (int pins);
+  int score();
 };
 
 #endif /* BOWLINGGAME_H_ */
