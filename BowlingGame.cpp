@@ -27,14 +27,18 @@ bool Game::isSpare(int ii) {
 
 int Game::getScore() {
   int score = 0;
-  int ii = 0;
-  for (int frameIndex = 0; frameIndex < 10; ++frameIndex) {
-    if (isSpare(ii)) {
-      score += 10 + rolls[ii + 2];
+  int frameIndex = 0;
+  for (int frame = 0; frame < 10; ++frame) {
+    if (10 == rolls[frameIndex]) {
+      score += 10 + rolls[frameIndex + 1] + rolls[frameIndex + 2];
+      frameIndex += 1;
+    } else if (isSpare(frameIndex)) {
+      score += 10 + rolls[frameIndex + 2];
+      frameIndex += 2;
     } else {
-      score += rolls[ii] + rolls[ii + 1];
+      score += rolls[frameIndex] + rolls[frameIndex + 1];
+      frameIndex += 2;
     }
-    ii += 2;
   }
   return score;
 }
