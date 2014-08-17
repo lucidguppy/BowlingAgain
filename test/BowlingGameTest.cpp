@@ -25,6 +25,9 @@ void BowlingGameTest::rollMany(int n, int pins) {
 TEST_CASE_METHOD(BowlingGameTest, "testGutterGame", "[bowlingGame]") {
   rollMany(20, 0);
   REQUIRE(0 == g.getScore());
-  }
-  REQUIRE(0 == g.score());
+}
+
+TEST_CASE_METHOD(BowlingGameTest, "allOnesGame", "[bowlingGame]") {
+  rollMany(20, 1);
+  REQUIRE(20 == g.getScore());
 }
