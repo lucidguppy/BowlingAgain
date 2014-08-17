@@ -17,6 +17,7 @@ class Game {
 
   bool isSpare(int ii);
   int strikeBonus(int frameIndex);
+  int spareBonus(int frameIndex);
 
  public:
   Game();
