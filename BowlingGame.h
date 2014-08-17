@@ -18,6 +18,7 @@ class Game {
   bool isSpare(int ii);
   int strikeBonus(int frameIndex);
   int spareBonus(int frameIndex);
+  int sumOfPinsInFrame(int frameIndex);
 
  public:
   Game();

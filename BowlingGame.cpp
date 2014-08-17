@@ -31,6 +31,11 @@ int Game::strikeBonus(int frameIndex) {
 int Game::spareBonus(int frameIndex) {
   return 10 + rolls[frameIndex + 2];
 }
+
+int Game::sumOfPinsInFrame(int frameIndex) {
+  return rolls[frameIndex] + rolls[frameIndex + 1];
+}
+
 int Game::getScore() {
   int score = 0;
   int frameIndex = 0;
@@ -42,7 +47,7 @@ int Game::getScore() {
       score += spareBonus(frameIndex);
       frameIndex += 2;
     } else {
-      score += rolls[frameIndex] + rolls[frameIndex + 1];
+      score += sumOfPinsInFrame(frameIndex);
       frameIndex += 2;
     }
   }
